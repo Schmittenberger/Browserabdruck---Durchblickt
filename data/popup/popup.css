@@ -1,0 +1,242 @@
+html, body {
+  height: 0;
+}
+
+@-moz-document url-prefix() {
+  html, body {
+    height: auto;
+  }
+}
+
+body {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  width: 300px;
+}
+@media screen and (max-width: 1170px) {
+  span{
+  font-size:15px;
+  }
+  }
+  table td table tr td:first-child{
+    min-width: 100px;
+  }
+  button{
+    padding:5px;
+  }
+  
+  #crawlBt{
+  color:white;
+  
+  background-color:rgb(46, 75, 68)
+  }
+  
+  #stopCrawl{
+  color:white;
+  background-color:rgb(71, 22, 22)
+  }
+  
+  .line > table {
+    /*the line between the menu and display of detected methods*/
+    border-spacing: 0 10px;
+    border-top: solid 1px rgba(0,0,0,0.5);
+  }
+.content {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+
+.content table {
+  width: 100%;
+  margin: auto;
+  border-spacing: 0;
+}
+
+.content > table {
+  /*the line between the menu and display of detected methods*/
+  border-spacing: 0 10px;
+  border-top: solid 1px rgba(0,0,0,0.5);
+}
+.textPop{
+	padding: 3px 5px;
+	
+}
+
+.content table tr td {
+  color: rgb(61, 61, 61);
+  font-size: 14px;
+  font-family: arial,sans-serif;
+}
+#h2Title{
+	padding-left:0px;
+	padding-top:10px;
+  padding-bottom:10px;
+  display: flex;
+  align-items: center;
+  margin:0px;
+}
+
+#h3Title{
+	padding-top:10px;
+  padding-bottom:10px;
+  display: flex;
+  align-items: center;
+  margin:0px;
+  font-weight: normal;
+}
+
+.header-color{
+  background-color: #ff00bc;
+}
+
+#h2Title span{
+  padding-left:8px;
+}
+
+#detectedTable{
+  width: 100%;
+  table-layout: fixed;
+}
+
+#detectedDiv{
+	background-image: linear-gradient(#f2f2f2, #fff 50%);
+	width:100%;
+}
+
+.boldSubHeading{
+  font-weight: bold;
+}
+
+.chip {
+  padding: 2 5px;
+  height: 20px;
+  font-size: 16px;
+  border-radius: 25px;
+  background-color: #f1f1f1;
+  width:40px;
+	text-align:center;
+  line-height: 20px;
+  float: right;
+}
+.infoChip {
+  padding: 2px 8px;
+  height: 20px;
+  font-size: 16px;
+  border-radius: 40px;
+  background-color: #f1f1f1;
+  text-align: center;
+  line-height: 20px;
+}
+
+.infoChip:hover {
+  cursor: pointer;
+  background-color: #dfdfdf;
+}
+.yes{
+  background-color: #ff00bc;
+  font-weight: bold;
+}
+
+#loading{
+  float:right;
+  margin-right:5px;
+}
+
+.hide {
+  visibility: hidden;
+}
+
+.info{
+  background-color: #f1f1f1;
+  width: 298px;
+  overflow-wrap: break-word;
+}
+
+.spoilerClosed {
+  display:none;
+}
+
+.spoilerOpen {
+  display:block;
+}
+
+.infoClosed {
+  display:none;
+}
+
+.infoOpen {
+  display:block;
+}
+
+#spoiler {
+  background-color: #f1f1f1;
+  text-align: center;
+}
+
+#spoiler:hover{
+  cursor:pointer;
+}
+
+
+/* laoding animation */
+@keyframes rotate {
+  from {
+      transform: rotate(0deg);
+  }
+  to { 
+      transform: rotate(360deg);
+  }
+}
+
+
+@-webkit-keyframes rotate {
+  from {
+      -webkit-transform: rotate(0deg);
+  }
+  to { 
+      -webkit-transform: rotate(360deg);
+  }
+}
+
+.load {
+width: 10px;
+height: 10px;
+border:solid 5px #ff00bc;
+border-radius: 50%;
+border-right-color: transparent;
+border-bottom-color: transparent;
+ -webkit-transition: all 0.2s ease-in;
+  -webkit-animation-name:             rotate; 
+  -webkit-animation-duration:         0.5; 
+  -webkit-animation-iteration-count:  infinite;
+  -webkit-animation-timing-function: linear;
+    
+     transition: all 0.2s ease-in;
+  animation-name:             rotate; 
+  animation-duration:         0.5s; 
+  animation-iteration-count:  infinite;
+  animation-timing-function: linear; 
+}
+
+
+.scroller {
+  scrollbar-color: #7f7f7f white;
+  scrollbar-width: thin;
+}
+
+.scroller::-webkit-scrollbar {
+  width: 7.5px;
+}
+
+.scroller::-webkit-scrollbar-track {
+  background: white; 
+}
+
+.scroller::-webkit-scrollbar-thumb {
+  background: #7f7f7f;
+  border-right: 1px solid white;
+}

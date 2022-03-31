@@ -1,0 +1,183 @@
+<!DOCTYPE html PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="popup.css">
+    <title>Browserabdruck - Durchblickt | Popup</title>
+<meta name="viewport" content="width=device-width,initial-scale=1"> <!-- this is for media queries --->
+<style>
+
+</style>
+  </head>
+  <body>
+    <div class="scroller">
+    <table class="header-color" style="width:100%">
+          <tr>
+            <td>
+              <h2 id="h2Title" > 
+                <!-- <img src="../icons/fingerprint-pngrepo-com.png" alt="Browserabdruck Logo" width="32"> -->
+                  <span style="padding-left:0px">Browserabdruck - Durchblickt</span>
+                
+              </h2>
+            </td>
+            <td><img src="../icons/fingerprint-pngrepo-com.png" alt="Browserabdruck Logo" width="32" style="padding-left:8px">
+            </td>
+            </tr>
+      </table>
+  
+    	
+    
+	     <table id="detectedTable">
+        <tr>
+           <td><h3 id="h3Title"><span id="url" title="Adresse der aktuellen Seite, die analysiert wird">- - -</span></h3> </td>
+           <td><span id="loading" class="load"> </span></td>
+        </tr>
+        <tr class="boldSubHeading"> <td>Browserabdruck </td><td> </td></tr>
+              <tr>
+                <td>Canvas Abdruck: <span class="infoChip" title="Info-Feld umschalten" id="canvasInfoChip">?</span></td>
+                <td><span id="canvas-d" class="chip"> --- </span></td>
+              </tr>
+              <tr>
+                <td id="canvas-info" class="info infoClosed">
+                  <span class="info-text">          
+                      <img src="../popup-examples/canvas.png">
+                      <span >
+                    Beim Canvas Fingerprinting wird ein Bild (siehe Bild "Digitale Souveränität") mit Text im Hintergrund der Webseite gemalt. 
+                    Kleine Unterschiede in der Farb- und Textgebung, die von Browser zu Browser anders sind, machen das resultierende Bild einzigartig. 
+                    Die Einzigartigkeit des Bildes kann genutzt werden, um Nutzer zu unterscheiden und als solches zu tracken.
+                    <div><a href="https://duckduckgo.com/?q=was+ist+Canvas+Fingerprinting?&ia=web" target="_blank">Mehr Information ...</a></div>
+                  </span>
+                  </span>
+      
+                </td>
+              </tr>
+
+              <tr>
+                <td>WebGL Abdruck:<span class="infoChip" title="Info-Feld umschalten" id="webglInfoChip">?</span></td>
+                <td><span id="webgl-d" class="chip"> --- </span></td>
+              </tr>
+              <tr>
+                <td id="webgl-info" class="info infoClosed">
+                  Ähnlich zum Canvas Abdruck wird bei dem WebGL Abdruck auch ein Bild gemalt. 
+                  Hierbei kann das Bild jedoch mit einer 3D-Software (WebGL) gezeichnet werden, was präzisere Unterschiede herstellen kann als der Canvas Abdruck.
+                  Die präzisen Feinheiten können genutzt werden, um Nutzer wiederzuerkennen. 
+                   <div><a href="https://duckduckgo.com/?q=was+ist+WebGL+Fingerprinting?&ia=web" target="_blank">Mehr Information ...</a></div>
+                </td>
+              </tr>
+              <tr>
+                <td>Audio Abdruck:<span class="infoChip" title="Info-Feld umschalten" id="audioInfoChip">?</span></td>
+                <td><span id="audio-d" class="chip"> --- </span></td>
+              </tr>
+              <tr>
+                <td id="audio-info" class="info infoClosed" colspan="2">
+                  <img src="../popup-examples/Soundwave.png">
+                  Ein Audio Abdruck speichert die Audiofähigkeiten des Systems. Dafür wird ein (stummer) Ton erzeugt und mit mathematischen Methoden auf die Fähigkeiten des Systems analysiert. 
+                  <div><a href="https://duckduckgo.com/?q=was+ist+Audio+Fingerprinting?&ia=web" target="_blank">Mehr Information ...</a></div>
+                </td>
+              </tr>
+
+              <tr class="boldSubHeading"><td> Sensoren </td><td> </td></tr>
+              <tr>
+                <td>Orientierungssensor:<span class="infoChip" title="Info-Feld umschalten" id="orientationInfoChip">?</span></td>
+                <td><span id="orientation-d" class="chip"> --- </span></td>
+              </tr>
+              <tr>
+                <td id="orientation-info" class="info infoClosed" colspan="2">
+                  Mobile Endgeräte und Tablets verfügen über einen Orientierungssensor, der die Orientierung des Geräts im dreidimensionalen Raum angibt. 
+                  Der Sensor wird unter anderem für Spiele verwendet.
+                  Aus der großen Menge an Daten, die der Sensor liefert, kann jedoch ein Muster abgelesen werden, was (in kleinen Gruppen) Nutzer unterscheiden kann.
+                  Weiterhin ist problematisch, dass Webseiten ohne dem Einverständnis der Nutzer auf den Sensor zugreifen können.
+                </td>
+              </tr>
+              <tr>
+                <td>Bewegungssensor:<span class="infoChip" title="Info-Feld umschalten" id="motionInfoChip">?</span></td>
+                <td><span id="motion-d" class="chip"> --- </span></td>
+              </tr>
+              <tr>
+                <td id="motion-info" class="info infoClosed" colspan="2">
+                  Der Bewegungssensor liefert Information zu der Beschleunigung des Geräts an drei Achsen. 
+                  Dieser Sensor bietet aber die gleichen Probleme wie der Orientierungssensor.
+                </td>
+              </tr>
+
+              <tr class="boldSubHeading"><td> Anderes </td><td> </td></tr>
+              <tr> 
+                <td>Akkustand:<span class="infoChip" title="Info-Feld umschalten" id="batteryInfoChip">?</span></td>
+                <td><span id="battery-d" class="chip"> --- </span></td>
+              </tr>
+              <tr>
+                <td id="battery-info" class="info infoClosed" colspan="2">
+                  Der Google Chrome Browser stellt Webseiten den aktuellen Akkustand des Geräts zur Verfügung. 
+                  Somit können Nutzer im kurzen Zeitraum über verschiedene Webseiten hinweg getrackt werden.
+                   Das Wissen über einen niedrigen Akkustand könnte auch zu Preisdiskriminierung führen, da es die Kaufbereitschaft erhöhen kann.
+                   In Firefox kann der Akkustand aus Gründen der Privatsphäre nicht abgelesen werden.
+                </td>
+              </tr>
+
+              <tr>
+                 <td>GPS Standort:<span class="infoChip" title="Info-Feld umschalten" id="geolocationInfoChip">?</span></td> 
+                 <td><span id="geolocation-d" class="chip"> --- </span></td>
+              </tr>
+              <tr>
+                <td id="geolocation-info" class="info infoClosed" colspan="2">
+                  Der Browser stellt eine Schnittstelle zur Verfügung, über die Webseiten die aktuelle Position des Geräts abfragen können.
+                   Die Abfrage erfordert immer die explizite Zustimmung der Nutzer.
+                   Webseiten können jedoch auch ohne diese Schnittstelle auf anderen Wegen einen Standort ermitteln, z.B. mithilfe der IP-Adresse.
+                </td>
+              </tr>
+
+            </table>
+
+	</div>
+	
+	<div class="content" style="padding-top: 8px">
+      <div class="line">
+        <table>
+          <tr>
+            <td id="spoiler">▼ Weitere Information ▼</td>
+          </tr>
+          </table>
+    <div id="spoilerContent" class="infoClosed">
+        <table>
+          <tr>
+            <td><h3 style="margin-bottom: 0px;">Wie können Nutzer ihre Privatsphäre schützen?</h3>
+          </td>
+        </tr>     
+        <tr>
+          <td>Durch die Verwendung von Browser Erweiterung, die die Privatsphäre schützen, z.B. <a href="https://ublockorigin.com/" target="_blank"> uBlock Origin </a> oder <a href="https://addons.mozilla.org/en-GB/firefox/addon/noscript/" target="_blank">NoScript</a>.
+        </td>
+      </tr>    
+      <tr>
+        <td>Und durch die Verwendung von <a href="https://www.mozilla.org/de/firefox/new/" target="_blank">Firefox</a> anstatt Google Chrome. Für kompromissbereite Nutzer ist der <a href="https://www.torproject.org/" target="_blank">Tor Browser</a> auch empfehlenswert.
+      </td>
+    </tr> 
+    <tr>
+      <td> Zusätzlich informiert <a href="https://coveryourtracks.eff.org/" target="_blank">coveryourtracks.eff.org</a> über weitere Tracking Methoden.
+    </td>
+  </tr>   
+    <!-- <tr>
+      <td> Zusätzlich zeigt kann es helfen aktuelle Literatur zu Web Tracking zu lesen, z.B. <a href="https://www.eff.org/de/node/101978" target="_blank">A Deep Dive Into the Technology of Corporate Surveillance</a>
+    </td>
+  </tr>  -->
+  </table>
+        <div class="line">
+      <table>
+        <!-- <tr>
+          <td>Alle Bilder und Texte in der Erweiterung liegen im Public Domain.</td>
+        </tr> -->
+            <tr>
+              <td>Kontakt: lukas.schmidt(at)st.ovgu.de</td>
+              <td><a href="https://github.com/Schmittenberger/Browserabdruck---Durchblickt" target="_blank"> GitHub</a></td>
+              </tr>
+        </table>
+      </div>
+      </div>
+        </div>
+    </div>
+	
+    <script type="text/javascript" src="/lib/browser-polyfill.js"></script>
+    <script type="text/javascript" src="/config.js"></script>
+    <script type="text/javascript" src="popup.js"></script>
+  </div>
+  </body>
+</html>

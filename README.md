@@ -3,11 +3,13 @@ Diese Erweiterung informiert praxisnah was ein Browserabdruck (englisch: browser
 
 ## Zielsetzung
 
-Privatsphäre im Internet ist für viele ein undurchsichtiges Thema, vor allem weil es unbemerkt erfolgt. Es gibt genügend Browser Erweiterungen, um sich dagegen zu schützen, wie z.B.  <a href="https://ublockorigin.com/" target="_blank"> uBlock Origin </a> oder <a href="https://addons.mozilla.org/en-GB/firefox/addon/noscript/" target="_blank">NoScript</a>. Es gibt aber bis jetzt keine Erweiterung, die interaktiv anzeigt ob die aktuell besuchte Webseite einen Fingerprinting (zu Deutsch: Browserabdruck) erstellt. Mit einem Klick auf das Icon dieser Erweiterung in der Navigationsleiste öffnet sich ein Fenster, dass genau dies transparent darstellt:
+Privatsphäre im Internet ist für viele ein undurchsichtiges Thema. Es gibt genügend Browser Erweiterungen, um sich gegen Tracker zu schützen, wie z.B.  <a href="https://ublockorigin.com/" target="_blank"> uBlock Origin </a> oder <a href="https://addons.mozilla.org/en-GB/firefox/addon/noscript/" target="_blank">NoScript</a>. Es gibt aber bis jetzt keine Erweiterung, die interaktiv anzeigt ob die aktuell besuchte Webseite einen Fingerprint (zu Deutsch: Browserabdruck) erstellt. Mit einem Klick auf das Icon dieser Erweiterung in der Navigationsleiste öffnet sich ein Fenster, dass genau dies transparent darstellt:
 <p align="center">
- <img src="https://user-images.githubusercontent.com/49319459/161066777-f19713f3-d2ab-479a-8fc1-2ad7d433b0f8.png" />
+<!-- <img src="https://user-images.githubusercontent.com/49319459/161066777-f19713f3-d2ab-479a-8fc1-2ad7d433b0f8.png" /> -->
+ <img src="https://user-images.githubusercontent.com/49319459/161102718-ddbd9ced-3b78-4702-a1a4-7f6af589793a.gif"  width="239" height="420"/> <!--  width="299" height="525" -->
+
 </p>
-Das Popup zeigt an welche Browserabdruck Methoden von der aktuellen Seite verwendet werden. Mit einem Klick auf das Fragezeichen öffnet sich ein Informationsfeld zur Aufklärung der jeweiligen Trackingmethode. <br />
+Das Popup zeigt an welche Fingerprint Methoden von der aktuellen Seite verwendet werden. Mit einem Klick auf das Fragezeichen öffnet sich ein Informationsfeld zur Aufklärung der jeweiligen Trackingmethode. <br />
 <br />
 Ziel ist somit, Nutzer über den Browserabdruck zu informieren. Dabei hilft das Wissen, geeignete Gegenmaßnahmen zu ergreifen und Aufmerksamkeit über die bisher allgemein unbekannte Tracking Methode zu schaffen. <br />
 
@@ -16,8 +18,18 @@ Ziel ist somit, Nutzer über den Browserabdruck zu informieren. Dabei hilft das 
 <ul>
   <li> Popup Icon Button in der Navigationsleiste des Browsers</li>
   <li> Zeigt an, welcher Abdruck von der Webseite gesammelt wurde </li>
-  <li> Einfache Erklärung mit Beispielen und Anwendungszweck der jeweiligen Abdruckmethode</li>
+  <li> Einfache Erklärung mit Beispielen und Anwendungszweck der jeweiligen Fingerprintmethode</li>
  <li> Weitere Informationen zu Gegenmaßnahmen</li>
+</ul>
+Fingerprint/Tracking Methoden die erkannt werden:
+<ul>
+  <li> Canvas Fingerprinting</li>
+  <li> WebGL Fingerprinting </li>
+  <li> Audio Fingerprinting</li>
+  <li> Orientierungssensor</li>
+  <li> Bewegungssensor</li>
+  <li> Batterie Status (Akkustand)</li>
+  <li> Geolocation API (Standort)</li>
 </ul>
 
 ## Was diese Erweiterung nicht macht

@@ -58,12 +58,12 @@ function handleSiteStatus(message) {
 	let url = message.response.url;
 	let splitUrl = message.response.url.split("/");
 	if(splitUrl.length > 3) url = splitUrl[2];
-	document.getElementById("url").innerHTML = url.replace("www.", "");
+	document.getElementById("url").innerText = url.replace("www.", "");
 
 	if(message.response.inject){
 		getSiteClassification()
 	} else{
-		document.getElementById("url").innerHTML = " Seite aktuell nicht analysierbar"
+		document.getElementById("url").innerText = " Seite aktuell nicht analysierbar"
 		injectedFailed();
 	}
 }
@@ -118,20 +118,20 @@ function injectedFailed(){
 
 function setTrackingToTrue(domId){
 	const element = document.getElementById(domId)
-	element.innerHTML = "Ja";
+	element.innerText = "Ja";
 	element.classList.add("yes");
 	element.title = "Ja, diese Art von Tracking wurde erkannt"
 }
 
 function setTrackingToUndefined(domId){
 	const element = document.getElementById(domId)
-	element.innerHTML = "---";
+	element.innerText = "---";
 	element.title = "Leider keine Erkenntnis hierzu"
 }
 
 function setTrackingToFalse(domId){
 	const element = document.getElementById(domId)
-	element.innerHTML = "Nein";
+	element.innerText = "Nein";
 	element.title = "Nein, diese Art von Tracking wurde nicht erkannt"
 }
 // ----------------------------------------------------------------------------------------
@@ -156,12 +156,12 @@ function toggleSpoiler(domId){
 	elem = document.getElementById(domId);
 	if(elem.classList.contains("infoOpen")) {
 		closeInfoField(elem);
-		document.getElementById("spoiler").innerHTML = "▼ Weitere Information ▼"
+		document.getElementById("spoiler").innerText = "▼ Weitere Information ▼"
 		
 	} else{
 		closeAllOtherInfoFields();
 		openInfoField(elem);
-		document.getElementById("spoiler").innerHTML = "▲ Weitere Information ▲"
+		document.getElementById("spoiler").innerText = "▲ Weitere Information ▲"
 		
 	}
 }
@@ -181,7 +181,7 @@ function closeAllOtherInfoFields(){
 	for(var index=0;index < openFieldsList.length;index++){
 		console.log("all fields", openFieldsList[index])
 		if(openFieldsList[index].id === "spoilerContent")
-			document.getElementById("spoiler").innerHTML = "▼ Weitere Information ▼"
+			document.getElementById("spoiler").innerText = "▼ Weitere Information ▼"
 		closeInfoField(openFieldsList[index]);
 	 }
 }

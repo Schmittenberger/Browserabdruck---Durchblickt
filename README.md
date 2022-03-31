@@ -35,10 +35,10 @@ Fingerprint/Tracking Methoden die erkannt werden:
 ## Was diese Erweiterung nicht macht
 <ul>
  <li> Blockiert keine Trackingmethoden! Tracking wird <bold>nur</bold> erkannt, nicht verhindert. Dafür gibt es schon etablierte Erweiterung wie <a href="https://ublockorigin.com/" target="_blank"> uBlock Origin </a> oder <a href="https://addons.mozilla.org/en-GB/firefox/addon/noscript/" target="_blank">NoScript</a>. </li>
-  <li> Es werden keine Daten jedweder Art gespeichert! Alle Daten über Abdruckmethoden persistieren nur so lange, wie eine Webseite besucht wird.  </li>
+  <li> Es werden keine Daten jedweder Art gespeichert! Alle Daten persistieren nur so lange, wie eine Webseite besucht wird.  </li>
 </ul>
 
 ## Installation
 Diese Erweiterung wurde für Firefox und Google Chrome (und Chromium-basierte Browser wie Opera) entwickelt. Es gibt zwei Methoden der Installation: <br>
 1. Die erste empfohlene Methode ist die Erweiterung in Firefox zu installieren. Es kann direkt aus dem Firefox Add-On Store installiert werden: https://addons.mozilla.org/en-US/firefox/addon/browserabdruck-durchblickt/
-2. Die zur Zeit zweiten Methode der Installation in Google Chrome ist dieses Repo herunterzuladen und manuell zu installieren. Dabei muss in Chrome die Seite chrome://extensions/ aufgerufen werden. Dann muss oben rechts der Entwicklermodus angeschaltet werden. Die Einstellung führt dazu, dass ein Menu herunterfährt. In dem Menu muss die Option "Entpackte Erweiterung laden" (auf Englisch: "Load unpacked extension") ausgewählt werden. In dem sich dann öffnenden Fenster muss dann der Ordner mit diesem Repo ausgewählt werden.
+2. Die zur Zeit zweiten Methode der Installation in Google Chrome ist die <a href="https://github.com/Schmittenberger/Browserabdruck---Durchblickt/releases/download/KOMPASS/Browserabdruck---Durchblickt-v0.1.zip">Erweiterung als ZIP herunterzuladen</a> und zu entpacken. Danach muss in Chrome die Seite chrome://extensions/ aufgerufen werden. Dann muss oben rechts der Entwicklermodus angeschaltet werden. Die Einstellung führt dazu, dass ein Menu herunterfährt. In dem Menu muss die Option "Entpackte Erweiterung laden" (auf Englisch: "Load unpacked extension") ausgewählt werden. In dem sich dann öffnenden Fenster muss der entpackte Ordner aus der heruntergeladenen ZIP ausgewählt werden.

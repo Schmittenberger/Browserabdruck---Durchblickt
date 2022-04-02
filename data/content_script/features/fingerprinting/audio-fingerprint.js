@@ -28,7 +28,8 @@
       "value": function () {
           handleDetection("createAnalyser",33);
         return createAnalyser.apply(this, arguments);
-      }
+      },
+      writable:true
     });
 
     const createAnalyserAA = AudioContext.prototype.__proto__.createAnalyser;
@@ -36,7 +37,8 @@
       "value": function () {
           handleDetection("createAnalyser",33);
         return createAnalyserAA.apply(this, arguments);
-      }
+      },
+      writable:true
     });
 
     const createOscillator = AudioContext.prototype.__proto__.createOscillator;
@@ -44,7 +46,8 @@
       "value": function () {
         handleDetection("createOscillator",33);
         return createOscillator.apply(this, arguments);
-      }
+      },
+      writable:true
     }); 
     
     const createOscillatorAA = OfflineAudioContext.prototype.__proto__.createOscillator;
@@ -52,7 +55,8 @@
       "value": function () {
         handleDetection("createOscillator",33);
         return createOscillatorAA.apply(this, arguments);
-      }
+      },
+      writable:true
     });  
     
     const createDynamicsCompressor = AudioContext.prototype.__proto__.createDynamicsCompressor;
@@ -60,7 +64,8 @@
       "value": function () {
         handleDetection("createDynamicsCompressor",33);
         return createDynamicsCompressor.apply(this, arguments);
-      }
+      },
+      writable:true
     }); 
     
     const createDynamicsCompressorAA = OfflineAudioContext.prototype.__proto__.createDynamicsCompressor;
@@ -68,14 +73,17 @@
       "value": function () {
         handleDetection("createDynamicsCompressor",33);
         return createDynamicsCompressorAA.apply(this, arguments);
-      }
+      },
+      writable:true
     });
     
     const getChannelDataAA = AudioBuffer.prototype.__proto__.getChannelData;
     Object.defineProperty(AudioBuffer.prototype.__proto__, "getChannelData", {
       "value": function () {
+        console.log("getting channel data");
         handleDetection("getChannelData",33);
         return getChannelDataAA.apply(this, arguments);
-      }
+      },
+      writable:true
     });
 

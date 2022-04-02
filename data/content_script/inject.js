@@ -20,14 +20,14 @@ window.addEventListener("message", function(event) {
     // We only accept messages from ourselves
     if (event.source != window)
         return;
-	
-	//  §T-DETECTOR-§ is a custom event identifier I made up 
+		
+	//  -T-DETECTR-7 is a custom event identifier I made up 
 	//  to avoid potential conflicts with other extensions/ pages using the same event identifier 
 	//  and by mistake picking up their messages
 	
 	//	if event.data exists and if it comes from this extension
-    if (event.data.type && (event.data.type == "§T-DETECTOR-§")) {
-        // console.log("Content script received message from page: ", event.data.text);
+    if (event.data.type && (event.data.type == "-T-DETECTR-7")) {
+		// console.log("Content script received message from page: ", event.data.text);
 		sendToBackground(event.data.text);
     } else{
 		// console.log("[Inject.js] rejecting data from unkown identifier",event)
@@ -49,6 +49,7 @@ script.src = browser.runtime.getURL('data/content_script/injectTest.js');
 script.onload = function() {
   this.remove();
 };
+
 (document.head || document.documentElement).appendChild(script);
 
 let scriptsToInject = [	

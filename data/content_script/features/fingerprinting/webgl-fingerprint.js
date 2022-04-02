@@ -14,6 +14,7 @@
         "value": function () {
             handleDetection(currentValue[1],32);	
             return currentValue[2].apply(this, arguments);
-        }
+        },
+        writable:true
         });
     });

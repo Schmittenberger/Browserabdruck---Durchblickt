@@ -37,10 +37,10 @@ function handleDetection(method,flagNumber){
 // of the TAB (tab specific) via posting a message. This message is picked up by inject.js (content script that injects all the files to detect tracking) and passed on to the 
 // script running in the background of the BROWSER (called lib/background.js and is active browser-wide)
 function sendToExtension(data){
-	var payload = { type: "§T-DETECTOR-§", text: data};
+	var payload = { type: "-T-DETECTR-7", text: data};
 	window.postMessage(payload, "*");
 }
 //---------------------------------------------------------
-	//  §T-DETECTOR-§ is a custom event identifier I made up 
+	//  -T-DETECTR-7 is a custom event identifier I made up 
 	//  to avoid potential conflicts with other extensions/ pages using the same event identifier 
 	//  and by mistake picking up their messages

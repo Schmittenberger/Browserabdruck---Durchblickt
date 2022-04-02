@@ -1,4 +1,3 @@
-
 	//Geolocation Checker
 	try{
 		if (navigator) {
@@ -10,7 +9,8 @@
 				  "value": function () {
 					handleDetection("geolocation",1);
 					return getCurrentPosition.apply(this, arguments);
-				  }
+				  },
+				  writable:true
 				});
 				
 				//watchPosition() is also used to get a users location
@@ -18,7 +18,8 @@
 				  "value": function () {
 					handleDetection("geolocation",1)
 					return getCurrentPosition.apply(this, arguments);
-				  }
+				  },
+				  writable:true
 				});
 			  }
 			}

@@ -20,8 +20,9 @@
 					copiedArguments[i] = arguments[i]
 			}
 		  		handleDetection([currentValue[1],copiedArguments],31);	
-		  return currentValue[2].apply(this, arguments);
-		}
+			return currentValue[2].apply(this, arguments);
+		},
+		writable:true
 		});
 	});
 	
@@ -34,20 +35,7 @@
 		set() {
 			handleDetection([currentValue[1],arguments[0]],31);
 			return currentValue[2].apply(this,arguments);
-		}
+		},
+		configurable:true
 		});
 	});	
-
-	/*
-	//this is the more explicit way of redefining the methods, which I used before rewriting it
-	// as you can see this code would have to be copy pasted for each function I want to listen to
-	// --> this would lead to unmaintainable code
-
-	const toDataURL = HTMLCanvasElement.prototype.toDataURL;
-	Object.defineProperty(HTMLCanvasElement.prototype, "toDataURL", {
-	"value": function () {
-	  handleDetection("toDataURL",31)
-	  return toDataURL.apply(this, arguments);
-	}
-	}); 
-	*/

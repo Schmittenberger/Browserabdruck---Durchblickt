@@ -7,7 +7,8 @@
 			"value": function () {
 				handleDetection("battery",1);
 				return batGet.apply(this, arguments);
-			}
+			},
+			writable:true
 		}); 
 	}
 

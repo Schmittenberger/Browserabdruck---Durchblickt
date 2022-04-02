@@ -16,5 +16,6 @@ Object.defineProperty(HTMLCanvasElement.prototype, "getContext", {
         // webgl fingerprinting
         handleDetection(["getContext",,copiedArguments],32);
   return getContext_.apply(this, arguments);
-}
+},
+writable:true
 });

@@ -9,8 +9,8 @@ function main(){
 
 function loadPopupData(tabs){
 	currentTabId = tabs[0].id;
-	setTimeout(getInjectStatus, 350);
-	setInterval(getInjectStatus, 5000);
+	setTimeout(getInjectStatus, 250);
+	setInterval(getInjectStatus, 2500);
 	setInterval(startLoadingCircle, 5000)
 }
 // loading circle

@@ -34,7 +34,7 @@ window.addEventListener("message", function(event) {
 	}
 });
 	
-//circumvent Content Security Policy blocking my scripts
+//Content Security Policy is blocking my scripts
 //https://stackoverflow.com/questions/45767434/chrome-extension-inject-script-with-dynamic-value-into-page-with-strict-csp
 // but now google chrome does not support this kind of injection
 // fix for google chrome:

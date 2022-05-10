@@ -1,5 +1,6 @@
 html, body {
   height: 0;
+  font-family: arial,sans-serif;
 }
 
 @-moz-document url-prefix() {
@@ -69,7 +70,6 @@ body {
 .content table tr td {
   color: rgb(61, 61, 61);
   font-size: 14px;
-  font-family: arial,sans-serif;
 }
 #h2Title{
 	padding-left:0px;

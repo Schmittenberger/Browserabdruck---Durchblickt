@@ -9,8 +9,8 @@ function main(){
 
 function loadPopupData(tabs){
 	currentTabId = tabs[0].id;
-	setTimeout(getInjectStatus, 350);
-	setInterval(getInjectStatus, 5000);
+	setTimeout(getInjectStatus, 250);
+	setInterval(getInjectStatus, 2500);
 	setInterval(startLoadingCircle, 5000)
 }
 // loading circle
@@ -27,7 +27,7 @@ function toggleLoadingCircle(){
 browser.runtime.onMessage.addListener(handleMessage);
 
 function handleMessage(request, sender, sendResponse) {
-  	sendResponse({response: "popup receieved message."});
+	return Promise.resolve(({response: "popup receieved message."}));
 }
 
 function handleResponse(message) {

@@ -33,7 +33,7 @@
 	].forEach(function (currentValue, index, array) {
 		Object.defineProperty(currentValue[0], currentValue[1], {
 		set() {
-			handleDetection([currentValue[1],arguments[0]],31);
+			handleDetection([currentValue[1]],31);
 			return currentValue[2].apply(this,arguments);
 		},
 		configurable:true

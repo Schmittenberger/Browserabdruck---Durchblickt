@@ -27,7 +27,7 @@ function toggleLoadingCircle(){
 browser.runtime.onMessage.addListener(handleMessage);
 
 function handleMessage(request, sender, sendResponse) {
-  	sendResponse({response: "popup receieved message."});
+	return Promise.resolve(({response: "popup receieved message."}));
 }
 
 function handleResponse(message) {

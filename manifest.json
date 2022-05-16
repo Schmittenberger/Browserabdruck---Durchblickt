@@ -13,7 +13,7 @@
 
     ]},
   "author": "Lukas Schmidt",
-  "permissions": ["tabs","activeTab","<all_urls>","webNavigation"],
+  "permissions": ["tabs","<all_urls>","webNavigation"],
   "description": "Mit dieser Erweiterung werden Browserabdruck Tracking Methoden erkannt und den Nutzern transparent angezeigt. Dies hilft Nutzern ihre eigene digitale Souveränität wahrzunehmen, indem sie über Browserabdrücke praxisnah aufgeklärt werden.",
   "page_action": {
     "default_popup": "/data/popup/popup.html",

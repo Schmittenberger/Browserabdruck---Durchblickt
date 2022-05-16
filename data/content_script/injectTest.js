@@ -5,4 +5,4 @@ let payload_data = {
     "source": "site"
 };
 var payload = { type: "-T-DETECTR-7", text: payload_data};
-window.postMessage(payload, "*");
+window.parent.postMessage(payload, "*");

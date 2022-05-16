@@ -20,7 +20,6 @@ function handleDetection(method,flagNumber){
 	} else{
 		newMethod = method;
 	}
-
 	if (typeof __upperLimitObject_JSFL0__[newMethod] == "undefined") {
 		__upperLimitObject_JSFL0__[newMethod] = 0;
 		sendToExtension(payload);
@@ -38,7 +37,7 @@ function handleDetection(method,flagNumber){
 // script running in the background of the BROWSER (called lib/background.js and is active browser-wide)
 function sendToExtension(data){
 	var payload = { type: "-T-DETECTR-7", text: data};
-	window.postMessage(payload, "*");
+	window.parent.postMessage(payload, "*");
 }
 //---------------------------------------------------------
 	//  -T-DETECTR-7 is a custom event identifier I made up 

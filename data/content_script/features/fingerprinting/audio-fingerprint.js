@@ -80,7 +80,6 @@
     const getChannelDataAA = AudioBuffer.prototype.__proto__.getChannelData;
     Object.defineProperty(AudioBuffer.prototype.__proto__, "getChannelData", {
       "value": function () {
-        console.log("getting channel data");
         handleDetection("getChannelData",33);
         return getChannelDataAA.apply(this, arguments);
       },

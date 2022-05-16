@@ -17,9 +17,9 @@ function sendToBackground(data){
 }
 	
 window.addEventListener("message", function(event) {
-    // We only accept messages from ourselves
-    if (event.source != window)
-        return;
+	//DISABLED TO CATCH TRACKING FROM INSIDE IFRAMES
+    // if (event.source != window)
+        // return;
 		
 	//  -T-DETECTR-7 is a custom event identifier I made up 
 	//  to avoid potential conflicts with other extensions/ pages using the same event identifier 
@@ -27,7 +27,6 @@ window.addEventListener("message", function(event) {
 	
 	//	if event.data exists and if it comes from this extension
     if (event.data.type && (event.data.type == "-T-DETECTR-7")) {
-		// console.log("Content script received message from page: ", event.data.text);
 		sendToBackground(event.data.text);
     } else{
 		// console.log("[Inject.js] rejecting data from unkown identifier",event)
